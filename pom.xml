@@ -35,6 +35,13 @@
         <artifactId>testng</artifactId>
         <version>7.7.1</version>
     </dependency>
-</dependencies>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-devtools-v111 -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-devtools-v111</artifactId>
+            <version>4.8.3</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 </project>

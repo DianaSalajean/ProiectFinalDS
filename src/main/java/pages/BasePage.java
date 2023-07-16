@@ -21,7 +21,7 @@ public class BasePage {
         driver.get(baseUrl);
     }
     @AfterMethod //folosim @AfterMethod daca vrem sa
-    inchidem browserul dupa fiecare test case in parte
+    //inchidem browserul dupa fiecare test case in parte
     public void tearDown() {
         driver.quit();
     }

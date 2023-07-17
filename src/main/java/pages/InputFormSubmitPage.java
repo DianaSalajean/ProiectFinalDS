@@ -7,9 +7,9 @@ public class InputFormSubmitPage {
     public InputFormSubmitPage(WebDriver driver) {
         super(driver);
     }
-    public void fillNameField(String test) {
+    public void fillNameField(String test){
     }
-    public void fillEmailField(String mail) {
+    public void fillEmailField(String mail); {
     }
     public void fillPasswordField(String pass) {
     }

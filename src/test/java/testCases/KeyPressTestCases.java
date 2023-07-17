@@ -22,11 +22,9 @@ public class KeyPressTestCases extends BasePage {
     public void PressEnterAndCheckThatTheMessageReturnedIsCorrect() throws InterruptedException{
         driver.findElement(By.linkText("Key Press")).click();
         keyPressPage.clickOnField();
-
-        WebElement resultElement = driver.findElement(By.id("result"));
+        WebElement resultElement = driver.findElement(By.xpath("//*[@id=\"my_field\"]"));
         String actualResultText = resultElement.getText();
         String expectedResultText = "You entered: ENTER";
-
         Assert.assertEquals(actualResultText, expectedResultText, "Entered text is incorrect");
 
     }

@@ -10,7 +10,6 @@ public class KeyPressPage extends BasePage {
     }
     public void clickOnField() {
         driver.findElement(By.linkText("Key Press"));
-        driver.findElement(By.xpath("//*[@id=\"my_field\"]"));
         driver.findElement(By.xpath("//*[@id=\"my_field\"]")).click();
         WebElement resultElement = driver.findElement(By.xpath("//*[@id=\"result\"]"));
     }

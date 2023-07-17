@@ -27,7 +27,4 @@ public class BasePage {
         driver.quit();
     }
 
-
-    protected void setUp(WebDriver driver) {
-    }
 }

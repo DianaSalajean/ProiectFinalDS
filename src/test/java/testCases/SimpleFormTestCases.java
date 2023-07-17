@@ -1,6 +1,7 @@
 package testCases;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -53,5 +54,37 @@ public class SimpleFormTestCases extends BasePage {
         simpleFormPage.selectTextField("Test123!");
         simpleFormPage.clickOnGetCheckedValue();
         Assert.assertTrue(driver.getPageSource().contains("Test123!"));
+    }
+
+    @Test
+    public void checkThatTheInputFieldIsEmptyFalse() throws InterruptedException {
+        driver.findElement(By.id("showInput")).click();
+        WebElement yourMessage = driver.findElement(By.id("message"));
+        Assert.assertEquals(false, yourMessage.isDisplayed());
+    }
+
+    @Test
+    public void checkThatTheInputFieldIsEmptyTrue() throws InterruptedException {
+        driver.findElement(By.id("showInput")).click();
+        WebElement yourMessage = driver.findElement(By.id("message"));
+        Assert.assertEquals(true, yourMessage.isDisplayed());
+    }
+
+    @Test
+    public void twoInputFieldsNumbers() throws InterruptedException {
+        driver.findElement(By.id("sum1")).sendKeys("3");
+        driver.findElement(By.id("sum2")).sendKeys("23");
+        driver.findElement(By.xpath("/html/body/div[1]/div/section[3]/div/div/div[2]/div[2]/div[2]/div/div[1]/form/button")).click();
+        WebElement yourValue = driver.findElement(By.id("addmessage"));
+        Assert.assertEquals(26, 26);
+    }
+
+    @Test
+    public void twoInputFieldsText() throws InterruptedException {
+        driver.findElement(By.id("sum1")).sendKeys("a");
+        driver.findElement(By.id("sum2")).sendKeys("b");
+        driver.findElement(By.xpath("/html/body/div[1]/div/section[3]/div/div/div[2]/div[2]/div[2]/div/div[1]/form/button")).click();
+        WebElement yourValue = driver.findElement(By.id("addmessage"));
+        Assert.assertEquals("a+b", "a+b");
     }
 }

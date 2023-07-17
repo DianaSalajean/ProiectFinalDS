@@ -18,11 +18,16 @@ public class BasePage {
         System.setProperty("web-driver.chrome.driver",
                 "C:/Users/HOME/Downloads/chromedriver.exe");
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
         driver.get(baseUrl);
     }
     @AfterMethod //folosim @AfterMethod daca vrem sa
     //inchidem browserul dupa fiecare test case in parte
     public void tearDown() {
         driver.quit();
+    }
+
+
+    protected void setUp(WebDriver driver) {
     }
 }

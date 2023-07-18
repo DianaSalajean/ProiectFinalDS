@@ -8,6 +8,9 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
+
 public class KeyPressTestCases extends BasePage {
     private KeyPressPage keyPressPage;
 

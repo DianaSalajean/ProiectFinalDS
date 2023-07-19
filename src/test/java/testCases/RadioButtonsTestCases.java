@@ -16,7 +16,6 @@ public class RadioButtonsTestCases extends BasePage {
         RadioButtonsPage = new RadioButtonsPage(driver);
     }
 
-
     @Test
     public void clickOnMale() throws InterruptedException {
 
